@@ -1,0 +1,14 @@
+npm install --save @nestjs/passport passport passport-local
+npm install --save-dev @types/passport-local
+
+npm install --save @nestjs/mongoose mongoose
+
+npm install --save @nestjs/jwt passport-jwt
+npm install --save-dev @types/passport-jwt 
+
+npm i --save @nestjs/axios
+npm i axios
+
+npm install --save qrcode
+
+npm install --save hbs 

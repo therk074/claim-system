@@ -72,3 +72,13 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 Nest is [MIT licensed](LICENSE).
 "# claim-system" 
+
+## Claim System
+
+- Register and login authentication with the role.
+- Users can only use the function of their role.
+1.Admin role can add a new claim list and the URL of the claim ticket that will be generated.
+2.Repair role can update repairing status 
+- The history of the claim list will be collected
+- Get notification from Line Notify when the admin role adds a new claim list.
+- The QRCode from the URL of the claim ticket will be shown in the history table

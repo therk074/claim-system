@@ -1,0 +1,387 @@
+{
+	"info": {
+		"_postman_id": "e6eab885-71aa-43d8-a296-31dc81bcfd4b",
+		"name": "gadgetstories",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\":\"repairman1@repairman1.com\",\r\n    \"password\":\"password\",\r\n    \"roles\": \"technician\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/auth/login?username=agent1@agent1.com&password=password",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "agent1@agent1.com"
+								},
+								{
+									"key": "password",
+									"value": "password"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login repair man",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/auth/login?username=repairman1@repairman1.com&password=password",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "username",
+									"value": "repairman1@repairman1.com"
+								},
+								{
+									"key": "password",
+									"value": "password"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "status type",
+			"item": [
+				{
+					"name": "show all status types",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFnZW50MUBhZ2VudDEuY29tIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNjQ5NDAwOTAwLCJleHAiOjE2NDk0MDQ1MDB9.aQPgDMZpJJZKKsQ0wDXBebdJr3fBDKIzpOM9-uR6Lrc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/status-type",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"status-type"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create status (role admin)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFnZW50MUBhZ2VudDEuY29tIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNjQ5NDA1ODc2LCJleHAiOjE2NDk0MTY2NzZ9.H8eHwgOkQO_utF_KEyILrWNU1mAH1FiQ0WsSgOQYQG8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "ส่งมอบสินค้าคืนลูกค้าเรียบร้อย",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/status-type",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"status-type"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "claim store",
+			"item": [
+				{
+					"name": "history",
+					"item": [
+						{
+							"name": "show all claim history",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFnZW50MUBhZ2VudDEuY29tIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNjQ5NDQ5NDA5LCJleHAiOjE2NDk0NjAyMDl9.YQaEwsy-GX-RpfJxVOs_6SZiZJOstGRxTDxPWkz31yQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/v1/claim-detail",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"claim-detail"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "show specific claim history",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFnZW50MUBhZ2VudDEuY29tIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNjQ5NDQ5NDA5LCJleHAiOjE2NDk0NjAyMDl9.YQaEwsy-GX-RpfJxVOs_6SZiZJOstGRxTDxPWkz31yQ",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:3000/api/v1/claim-detail?id=3",
+									"host": [
+										"localhost"
+									],
+									"port": "3000",
+									"path": [
+										"api",
+										"v1",
+										"claim-detail"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "create claim list (admin role)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFnZW50MUBhZ2VudDEuY29tIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNjQ5NDQ3NTUzLCJleHAiOjE2NDk0NTgzNTN9.39qEMzIVRsJGk5qRkn_davHMk0EIvx4QetKDbOLX_rI",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "title",
+									"value": "เคลมหูฟัง",
+									"type": "text"
+								},
+								{
+									"key": "content",
+									"value": "ติดๆดับๆ",
+									"type": "text"
+								},
+								{
+									"key": "customer_name",
+									"value": "test customer",
+									"type": "text"
+								},
+								{
+									"key": "customer_email",
+									"value": "test@demo.com",
+									"type": "text"
+								},
+								{
+									"key": "customer_phone",
+									"value": "099-123-1234",
+									"type": "text"
+								},
+								{
+									"key": "token",
+									"value": "DFOj46xXezz1CH76SEgvjayWxnizreuPIJd84XcGg1e",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/claim-store",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"claim-store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "show all claim list",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImFnZW50MUBhZ2VudDEuY29tIiwicm9sZXMiOlsiYWRtaW4iXSwiaWF0IjoxNjQ5Mzk4MDA0LCJleHAiOjE2NDk0MDE2MDR9.hO2cQM198fe7pXe4wwCYJB0cWef05fQc5s-5gsZCURA",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/api/v1/claim-store",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"claim-store"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update claim status (repair role)",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InJlcGFpcm1hbjFAcmVwYWlybWFuMS5jb20iLCJyb2xlcyI6WyJ0ZWNobmljaWFuIl0sImlhdCI6MTY0OTQwNjc1NywiZXhwIjoxNjQ5NDE3NTU3fQ.TDNURD0eBxZWIZ9hN7qTgbdSgdFPz-WXiFEXWihgIOk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "status",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:3000/api/v1/claim-store/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"v1",
+								"claim-store",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

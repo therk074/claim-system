@@ -2,7 +2,7 @@ import { Injectable, Logger } from '@nestjs/common';
 import { User, UserDocument } from './schema/users.schema';
 import { Model } from 'mongoose';
 import { InjectModel } from '@nestjs/mongoose';
-import { Role } from 'src/role/role.enum';
+import { Role } from '../role/role.enum';
 
 const logger = new Logger('users')
 @Injectable()

@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import * as QRCode from 'qrcode'
-import { ClaimStoreService } from 'src/claim-store/claim-store.service';
+import { ClaimStoreService } from '../claim-store/claim-store.service';
 
 const logger = new Logger('claim-QRCode')
 @Injectable()

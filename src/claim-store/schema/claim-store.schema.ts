@@ -1,8 +1,8 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose from 'mongoose';
 import { Document } from 'mongoose';
-import { StatusType } from 'src/status-type/schema/status-type.schema';
-import { User } from 'src/users/schema/users.schema';
+import { StatusType } from '../../status-type/schema/status-type.schema';
+import { User } from '../../users/schema/users.schema';
 
 export type ClaimStoreDocument = ClaimStore & Document;
 

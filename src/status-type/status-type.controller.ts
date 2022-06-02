@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Post, UseGuards, UseInterceptors } from '@nestjs/common'; 
 import { FileInterceptor } from '@nestjs/platform-express';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';  
-import { AdminGuard } from 'src/role/admin-roles.guard';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';  
+import { AdminGuard } from '../role/admin-roles.guard';
 import { StatusTypeService } from './status-type.service';
 
 @UseGuards(JwtAuthGuard)

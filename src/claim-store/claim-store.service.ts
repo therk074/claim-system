@@ -2,11 +2,11 @@ import { Injectable, Logger } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { ClaimStore, ClaimStoreDocument } from './schema/claim-store.schema';
 import { Model } from 'mongoose';
-import { StatusTypeService } from 'src/status-type/status-type.service';
-import { ClaimHistoryService } from 'src/claim-history/claim-history.service';
+import { StatusTypeService } from '../status-type/status-type.service';
+import { ClaimHistoryService } from '../claim-history/claim-history.service';
 import { UsersService } from '../users/users.service';
-import { ClaimNotifyService } from 'src/claim-notify/claim-notify.service';
-import { ClaimQrcodeService } from 'src/claim-qrcode/claim-qrcode.service';
+import { ClaimNotifyService } from '../claim-notify/claim-notify.service';
+import { ClaimQrcodeService } from '../claim-qrcode/claim-qrcode.service';
 
 const logger = new Logger('claim-store')
 @Injectable()

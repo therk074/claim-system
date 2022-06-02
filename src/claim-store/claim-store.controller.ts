@@ -1,8 +1,8 @@
 import { Controller, Request, Post, UseGuards, Body, Get, UseInterceptors, Put, Param, } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard'; 
-import { AdminGuard } from 'src/role/admin-roles.guard';
-import { RepairGuard } from 'src/role/repair-roles.guard';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard'; 
+import { AdminGuard } from '../role/admin-roles.guard';
+import { RepairGuard } from '../role/repair-roles.guard';
 import { ClaimStoreService } from './claim-store.service';
 
 @UseGuards(JwtAuthGuard)

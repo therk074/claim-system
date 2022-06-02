@@ -1,9 +1,9 @@
 import { Controller, Request, Post, UseGuards, Body, Get, UseInterceptors } from '@nestjs/common';
 import { FileInterceptor } from '@nestjs/platform-express';
-import { LocalAuthGuard } from 'src/auth/local-auth.guard';
+import { LocalAuthGuard } from '../auth/local-auth.guard';
 import { UsersService } from './users.service';
 import { AuthService } from '../auth/auth.service';
-import { JwtAuthGuard } from 'src/auth/jwt-auth.guard';
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @Controller('auth')
 export class UsersController {

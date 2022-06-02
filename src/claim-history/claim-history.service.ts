@@ -1,6 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
-import { ClaimHistory, ClaimHistoryDocument } from './schema/claim-History.schema';
+import { ClaimHistory, ClaimHistoryDocument } from './schema/claim-history.schema';
 import { Model } from 'mongoose';
 
 const logger = new Logger('claim-history')
